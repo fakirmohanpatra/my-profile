@@ -1,0 +1,22 @@
+# Python
+.venv/
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+
+# Node & Next.js
+node_modules/
+.next/
+out/
+build/
+dist/
+
+# Env & IDE
+.env*.local
+.env
+.DS_Store
+*.swp
+*.swo
+.vscode/
+.idea/
