@@ -19,8 +19,8 @@ app.add_middleware(
 
 PROFILE_DATA = {
     "name": "Fakir Mohan Patra",
-    "title": "Senior Backend & Distributed Systems Engineer",
-    "tagline": "Architecting resilient, high-throughput streaming systems, real-time AI audio pipelines, and purpose-built time-series engines.",
+    "title": "Backend Engineer",
+    "tagline": "Designing and building distributed, real-time data systems using .NET and Orleans. Strong expertise in event-driven architectures with Kafka and NATS (10M+ events/day) on Azure.",
     "location": "Bangalore, IN",
     "phone": "+91 93483 63260",
     "email": "fakirmohan@alumni.iitm.ac.in",
@@ -35,7 +35,7 @@ PROFILE_DATA = {
         },
         {
             "degree": "B.Tech in Mechanical Engineering",
-            "institution": "Indian Institute of Information Technology Jabalpur (IIIT Jabalpur)",
+            "institution": "Indian Institute of Information Technology, Jabalpur (IIIT Jabalpur)",
             "period": "2015 – 2019",
             "highlights": "Strong foundation in computational mechanics, robotics, and systems engineering."
         }
@@ -44,63 +44,63 @@ PROFILE_DATA = {
         {
             "name": "Microsoft Certified: Azure AI Fundamentals (AI 900)",
             "issued": "June 2025",
-            "badge": "Azure AI Specialist"
+            "badge": "Azure AI Fundamentals"
         }
     ],
     "awards": [
         {
             "title": "2x Spotlight Award",
-            "organization": "Kongsberg Digital",
+            "organization": "Falkor",
             "year": "2023 – 2024",
-            "description": "Awarded twice for engineering leadership: spearheading the zero-downtime Python-to-.NET Core migration and delivering the high-throughput time-series data storage POC."
+            "description": "Recognized twice for engineering excellence: leading the Python-to-.NET Core migration and delivering a scalable data integration POC."
         },
         {
-            "title": "Top 5 Finalist - AI Hackathon",
+            "title": "Top 5 in AI Hackathon",
             "organization": "Enterprise AI Innovation Challenge",
             "year": "2024",
-            "description": "Built an end-to-end RAG-based marketing content generation chatbot with semantic retrieval and grounded citation."
+            "description": "Built a RAG-based chatbot for domain-specific marketing content generation with semantic retrieval and grounded citations."
         }
     ],
     "stats": [
-        {"label": "Daily Events Processed", "value": "10M+", "sub": "Real-time streaming pipelines"},
-        {"label": "Write Throughput", "value": "~18.5k/s", "sub": "GreptimeDB benchmark"},
-        {"label": "Query Latency", "value": "519ms", "sub": "Filtered time-series scans"},
-        {"label": "Autonomous Videos", "value": "5 / day", "sub": "End-to-end AI media pipeline"},
-        {"label": "Years in Production", "value": "3+", "sub": "Distributed .NET, Python, Cloud"}
+        {"label": "Daily Events Processed", "value": "10M+", "sub": "Kafka & NATS pipelines"},
+        {"label": "Time-Series Ingestion", "value": "7K+/min", "sub": "GreptimeDB alert stream"},
+        {"label": "Issue Diagnosis Time", "value": "-30%", "sub": "Centralized observability"},
+        {"label": "Autonomous Videos", "value": "5 / day", "sub": "The Dugout AI pipeline"},
+        {"label": "Runtime Modernization", "value": ".NET 10", "sub": "Wolverine + NATS.Net v3"}
     ]
 }
 
 PROJECTS_DATA = [
     {
         "id": "greptimedb-migration",
-        "title": "SitecomAlert: SQL Server to GreptimeDB Time-Series Migration",
-        "tagline": "High-volume alert ingestion migration replacing slow relational scans with purpose-built time-series storage at 10M+ records.",
-        "company": "Kongsberg Digital",
+        "title": "Time-Series Alert Ingestion & GreptimeDB Migration",
+        "tagline": "Led POC and end-to-end migration from SQL Server to GreptimeDB for high-volume ingestion of 7K+ time-series alert records per minute with automated TTL-based compaction.",
+        "company": "Falkor",
         "category": "Distributed Systems / Databases",
         "featured": True,
         "impactMetrics": [
-            {"metric": "~18,500 rows/sec", "label": "Write Throughput Benchmark"},
-            {"metric": "519ms", "label": "Sub-Second Query Latency"},
-            {"metric": "0 manual jobs", "label": "TTL-Based Auto Expiration"},
-            {"metric": "10M+ records", "label": "Scale Handled Seamlessly"}
+            {"metric": "7K+/min", "label": "Alert Ingestion Rate"},
+            {"metric": "Sub-Second", "label": "Query Response Time"},
+            {"metric": "Auto TTL", "label": "Compaction & Retention"},
+            {"metric": "Dual-Write", "label": "Zero-Downtime Cutover"}
         ],
         "techStack": ["GreptimeDB", "C# / .NET Core", "gRPC", "PostgreSQL Protocol", "SQL Server", "PromQL", "Grafana", "Docker"],
-        "problemStatement": "SitecomAlert's alert storage on SQL Server faced severe scalability bottlenecks at 10M+ records. Time-range queries took tens of seconds, manual retention/cleanup cron jobs caused table locks, and relational storage lacked time-series compression.",
-        "solution": "Designed and delivered an end-to-end migration to GreptimeDB using a custom schema with tags, timestamp index, and numeric values. Reused in-house GreptimeDBIngester via gRPC for blazing fast writes, while application query paths read using PostgreSQL wire protocol. Configured 30-day automatic TTL and dual-write cutover.",
+        "problemStatement": "Alert data storage on SQL Server faced severe scalability bottlenecks as historical volume accumulated. High-volume ingestion struggled under lock contention, manual retention cleanup jobs caused database blocking, and relational storage lacked efficient time-series compaction.",
+        "solution": "Led a POC and end-to-end migration from SQL Server to GreptimeDB for high-volume ingestion of 7K+ time-series alert records per minute; designed a scalable schema with TTL-based compaction to prevent production data bloating, eliminate manual cleanup, and retain historical data intelligently for long-term access. Implemented a dual-write transition strategy and leveraged an in-house gRPC client for ingestion with PostgreSQL wire protocol for application querying.",
         "architecture": {
             "nodes": [
                 {"id": "ingest", "name": "Telemetry Ingestion", "role": "Raw Alert Stream", "tech": "Kafka / Wolverine"},
                 {"id": "grpc", "name": "GreptimeDBIngester", "role": "High-speed gRPC Client", "tech": "In-house gRPC Client"},
-                {"id": "greptime", "name": "GreptimeDB Cluster", "role": "Time-Series Store with 30d TTL", "tech": "PromQL / Tags & TimeIndex"},
+                {"id": "greptime", "name": "GreptimeDB Cluster", "role": "Time-Series Store with Automated TTL", "tech": "PromQL / Tags & TimeIndex"},
                 {"id": "query", "name": "Query Engine", "role": "Hydrates Alert Details", "tech": "Postgres Wire Protocol"},
                 {"id": "sqlserver", "name": "SQL Server (Relational)", "role": "Retains UserNotification & Settings", "tech": "Entity Framework Core"}
             ],
             "dataFlow": [
                 "1. Alerts arrive via Kafka/Wolverine consumers",
                 "2. Dual-write during transition: writes to SQL Server and GreptimeDB concurrently",
-                "3. Ingest via gRPC ingester achieving ~18.5k rows/sec",
-                "4. Reads migrated to hydrate alert details directly from GreptimeDB via Postgres protocol",
-                "5. Automatic 30-day TTL purges old records at storage layer without cron jobs"
+                "3. Ingest via gRPC ingester processing 7K+ alert records/min",
+                "4. Reads migrated to hydrate alert details directly from GreptimeDB via Postgres protocol with sub-second latencies",
+                "5. Automatic TTL-based compaction purges expired records at storage layer without manual cleanup jobs"
             ]
         },
         "whyQuestions": [
@@ -110,7 +110,7 @@ PROJECTS_DATA = [
             },
             {
                 "q": "Why reuse in-house gRPC client instead of official GreptimeDB .NET SDK?",
-                "a": "The official GreptimeDB .NET SDK was still in early incubation. Reusing our battle-tested in-house GreptimeDBIngester gRPC client eliminated experimental third-party dependency risks while hitting ~18,500 rows/sec write throughput."
+                "a": "The official GreptimeDB .NET SDK was still in early incubation. Reusing our battle-tested in-house GreptimeDBIngester gRPC client eliminated experimental third-party dependency risks while delivering reliable high-throughput ingestion."
             },
             {
                 "q": "What architectural trade-offs were made?",
@@ -120,32 +120,32 @@ PROJECTS_DATA = [
     },
     {
         "id": "gpt-realtime-voice",
-        "title": "Enterprise GPT-Realtime Voice AI Pipeline (KvantumX)",
-        "tagline": "Spoken conversational AI mode for enterprise drilling and well-operations with dual-flow WebSocket fallback and zero-leak auth.",
-        "company": "Kongsberg Digital",
+        "title": "Enterprise Real-Time Voice AI Conversational Pipeline",
+        "tagline": "Real-time STT-TTS conversational pipeline for enterprise voice interactions, delivering low-latency multi-session experiences.",
+        "company": "Falkor",
         "category": "AI & Real-Time Streaming",
         "featured": True,
         "impactMetrics": [
-            {"metric": "<300ms", "label": "Perceived Audio Latency"},
-            {"metric": "0 API Key leaks", "label": "Server-side WebSocket byte-pump"},
-            {"metric": "100%", "label": "Orphaned Tool Call Auto-Healing"},
-            {"metric": "Dual Flow", "label": "Cloud GPT + Offline Piper Fallback"}
+            {"metric": "Low Latency", "label": "Multi-Session Voice Engine"},
+            {"metric": "Zero Leaks", "label": "Server-Side Byte-Pump Relay"},
+            {"metric": "Isolated", "label": "Session State & Concurrency"},
+            {"metric": "Demo Asset", "label": "Sales Enablement Showcase"}
         ],
-        "techStack": ["OpenAI GPT Realtime", "WebSockets", "C# / .NET", "Piper Neural TTS", "Whisper", "VAD", "Kubernetes", "AG-UI Protocol"],
-        "problemStatement": "Enterprise field operators required hands-free conversational voice assistance for drilling telemetry. Previous SignalR server-side audio suffered latency lags, concurrent tool execution corrupted session states, and orphaned tool calls poisoned chat history resulting in HTTP 400 rejections.",
-        "solution": "Built a low-latency WebSocket relay (RealtimeVoiceWebSocketBridge) acting as an authenticated server-side byte-pump. Enforced a single tool call pattern (`ask_orchestrator_agent`) routing through existing AG-UI endpoints for single-source-of-truth. Built dual-flow server-driven dispatch with offline local STT/TTS fallback.",
+        "techStack": ["OpenAI GPT Realtime", "WebSockets", "C# / .NET", "Piper Neural TTS", "Whisper", "VAD", "Kubernetes", "Enterprise Agent Protocol"],
+        "problemStatement": "Enterprise operations required hands-free conversational voice assistance instead of typed queries. Early implementations faced concurrency race conditions, session state corruption across multi-turn exchanges, audio echo, and connection dropouts during silent intervals.",
+        "solution": "Designed and implemented a real-time STT-TTS conversational pipeline for enterprise voice interactions, enabling customers to engage through live voice conversations instead of typed queries; resolved concurrency, session management, state isolation, and audio echo issues to deliver low-latency multi-session experiences, creating a compelling customer demo that became a valuable sales enablement asset during product showcases.",
         "architecture": {
             "nodes": [
                 {"id": "client", "name": "Browser / Mobile Client", "role": "Captures mic audio & plays PCM stream", "tech": "Web Audio API"},
                 {"id": "bridge", "name": "Voice WebSocket Bridge", "role": "Secure Byte-Pump & Auth Guard", "tech": "C# ASP.NET Core WS"},
                 {"id": "realtime", "name": "OpenAI GPT-Realtime", "role": "Native Speech-to-Speech", "tech": "GPT Realtime WebSocket"},
-                {"id": "orchestrator", "name": "Orchestrator Agent", "role": "Single Source of Truth Tool Calling", "tech": "/agui endpoint"},
+                {"id": "orchestrator", "name": "Orchestrator Agent", "role": "Single Source of Truth Tool Calling", "tech": "Enterprise Orchestrator API"},
                 {"id": "fallback", "name": "Private-Cloud Fallback", "role": "Offline VAD + Whisper + Piper TTS", "tech": "Local Neural Audio"}
             ],
             "dataFlow": [
                 "1. Browser connects via authenticated WebSocket to RealtimeVoiceWebSocketBridge",
                 "2. Backend proxies raw PCM bytes to OpenAI GPT-Realtime with server-side API keys",
-                "3. Model triggers single tool: `ask_orchestrator_agent` for drilling domain logic",
+                "3. Model triggers single tool: `ask_orchestrator_agent` for domain logic",
                 "4. Tool execution is strictly serialized per session to avoid state corruption",
                 "5. If offline or cloud fails, server dynamically switches to Flow 2 (VAD + Whisper + Piper TTS)"
             ]
@@ -172,18 +172,18 @@ PROJECTS_DATA = [
     {
         "id": "the-dugout-media-pipeline",
         "title": "The Dugout: Autonomous AI Media Pipeline",
-        "tagline": "End-to-end 24/7 automated sports media pipeline publishing 5 daily broadcast-grade short videos to YouTube Shorts & Instagram Reels.",
+        "tagline": "End-to-end autonomous sports media pipeline publishing 5 daily broadcast-grade short videos to YouTube Shorts & Instagram Reels with fact-verified scripts and automated publishing.",
         "company": "Personal Engineering Project",
         "category": "AI Automation & Computer Vision",
         "featured": True,
         "impactMetrics": [
             {"metric": "5 videos/day", "label": "Daily Autonomous Output"},
-            {"metric": "0 Hallucination", "label": "Deterministic Regex + LLM Grounding"},
+            {"metric": "Fact-Audited", "label": "Deterministic Regex + Grounding"},
             {"metric": "Frame 0 CTR", "label": "Custom Thumbnail Algorithmic Injection"},
-            {"metric": "100% Free Tier", "label": "Zero-Cost Infra via Git & GitHub Actions"}
+            {"metric": "24/7 Cloud", "label": "Docker & GitHub Actions Execution"}
         ],
         "techStack": ["Python", "Google Gemini API", "FFmpeg / MoviePy", "Docker", "Edge-TTS", "YouTube Data API v3", "Meta Graph API", "GitHub Actions"],
-        "problemStatement": "Creating viral sports short-form video content requires constant breaking news monitoring, verified stats, emotional scriptwriting, dynamic video editing, and scheduled publishing across multiple platforms. Doing this manually costs 4+ hours daily.",
+        "problemStatement": "Creating viral sports short-form video content requires constant breaking news monitoring, verified stats, compelling scriptwriting, dynamic video editing, and scheduled publishing across multiple platforms. Doing this manually costs 4+ hours daily.",
         "solution": "Engineered an autonomous 5-stage pipeline: RSS Discovery with custom virality scoring, 30-day Jaccard deduplication, 5-beat retention scriptwriter across 4 personas, dual-engine voice synthesis (Gemini Puck + Edge-TTS fallback), authentic Wikimedia photo retrieval with Ken Burns sweeps, and automated Frame 0 publishing.",
         "architecture": {
             "nodes": [
@@ -225,19 +225,19 @@ PROJECTS_DATA = [
     {
         "id": "dotnet-messaging-upgrade",
         "title": ".NET 10 & Wolverine Messaging Platform Modernization",
-        "tagline": "Upgraded enterprise messaging layer from .NET 8 to .NET 10, modernizing Wolverine, NATS JetStream, Kafka, and Orleans.",
-        "company": "Kongsberg Digital",
+        "tagline": "Upgraded enterprise messaging platform from .NET 8 to .NET 10, modernizing Wolverine, Kafka, and NATS integrations with native NATS.Net v3 capabilities.",
+        "company": "Falkor",
         "category": "Cloud & Infrastructure",
         "featured": False,
         "impactMetrics": [
-            {"metric": ".NET 10", "label": "Target Runtime Upgraded"},
-            {"metric": "-40%", "label": "Boilerplate Custom NATS Plumbing"},
-            {"metric": "Automated", "label": "JetStream Stream & Consumer Provisioning"},
-            {"metric": "100%", "label": "Zero Startup Config Regressions"}
+            {"metric": ".NET 10", "label": "Target Runtime Modernized"},
+            {"metric": "NATS.Net v3", "label": "Native Capabilities Adopted"},
+            {"metric": "Plug-and-Play", "label": "Kafka & NATS Abstraction"},
+            {"metric": "Reliable", "label": "Stream & Consumer Provisioning"}
         ],
         "techStack": [".NET 10", "C#", "Wolverine", "NATS JetStream", "Apache Kafka", "Microsoft Orleans", "Docker", "Kubernetes"],
-        "problemStatement": "The messaging platform supported multiple brokers via generic abstraction, but NATS JetStream required heavy custom initialization around Wolverine. Upgrading from .NET 8 to .NET 10 presented the opportunity to eliminate fragile custom plumbing.",
-        "solution": "Migrated to .NET 10 and upgraded Wolverine/Orleans dependencies. Refactored NATS transport lifecycle to delegate stream and consumer provisioning directly to native Wolverine/NATS capabilities. Overhauled startup logging and distinguished benign initialization exceptions from critical broker failures.",
+        "problemStatement": "The enterprise messaging platform supported multiple brokers via generic abstractions, but NATS JetStream required substantial custom initialization and consumer plumbing around Wolverine. As the team targeted .NET 10, maintaining redundant custom wrappers increased technical debt and operational complexity.",
+        "solution": "Upgraded the messaging platform from .NET 8 to .NET 10, modernizing Wolverine, Kafka, NATS integrations by replacing custom NATS JetStream initialization with native NATS.Net v3 capabilities, building a plug-and-play messaging abstraction that enabled customers to switch between Kafka and NATS without application-level changes while simplifying stream and consumer provisioning and improving startup reliability.",
         "architecture": {
             "nodes": [
                 {"id": "orleans", "name": "Orleans Grains", "role": "Virtual Actor State & Workflows", "tech": "Microsoft Orleans (.NET 10)"},
@@ -255,7 +255,7 @@ PROJECTS_DATA = [
         "whyQuestions": [
             {
                 "q": "Why eliminate custom NATS initialization in favor of Wolverine native capabilities?",
-                "a": "Custom boilerplate creates maintenance debt and divergence across broker implementations. Newer Wolverine releases provide first-class native JetStream stream and consumer provisioning, simplifying startup and reducing failure surfaces."
+                "a": "Custom boilerplate creates maintenance debt and divergence across broker implementations. Newer Wolverine and NATS.Net v3 capabilities provide first-class native JetStream stream and consumer provisioning, simplifying startup and reducing code bloat."
             },
             {
                 "q": "How did startup exception handling improve reliability?",
@@ -266,18 +266,19 @@ PROJECTS_DATA = [
     {
         "id": "flask-to-dotnet-cqrs",
         "title": "CQRS Ingestion Service Migration (Flask to .NET Core)",
-        "tagline": "Modernized third-party telemetry ingestion services from Python Flask to .NET Core with CQRS pattern for high-reliability data flows.",
-        "company": "Kongsberg Digital",
+        "tagline": "Migrated third-party telemetry ingestion services from Flask to .NET Core with a CQRS architecture, cutting issue diagnosis time by 30% and improving observability.",
+        "company": "Falkor",
         "category": "Backend Modernization",
         "featured": False,
         "impactMetrics": [
-            {"metric": "CQRS", "label": "Separated Command & Query Paths"},
-            {"metric": "Standardized", "label": "Consolidated onto .NET Ecosystem"},
-            {"metric": "Observability", "label": "Full OpenTelemetry & Structured Logs"}
+            {"metric": "CQRS", "label": "Decoupled Command/Query Flow"},
+            {"metric": "-30%", "label": "Issue Diagnosis Time"},
+            {"metric": "Standardized", "label": ".NET Ecosystem Flows"},
+            {"metric": "Centralized", "label": "Logging & Observability"}
         ],
         "techStack": [".NET Core", "C#", "CQRS", "Flask / Python", "Docker", "Argo CD", "OpenTelemetry"],
-        "problemStatement": "Third-party data ingestion microservices were written in Flask, causing fragmentation in telemetry, monitoring, and concurrency handling within an otherwise .NET-centric enterprise ecosystem.",
-        "solution": "Re-engineered the ingestion service in .NET Core using the CQRS pattern. Completely decoupled the high-throughput write pipeline from downstream query and aggregation services, adding standardized health checks, metrics, and structured logging.",
+        "problemStatement": "Third-party data ingestion microservices were built on Flask, creating operational friction with the rest of the .NET enterprise platform, lacking unified telemetry and centralized logging, and making failure diagnosis slow and fragmented.",
+        "solution": "Migrated third-party data ingestion services from Flask to .NET Core, implementing a CQRS-based ingestion architecture that standardized data flows within the .NET ecosystem, reduced production issue diagnosis time by 30%, and improved observability through centralized logging and monitoring for faster failure debugging.",
         "architecture": {
             "nodes": [
                 {"id": "source", "name": "3rd Party Telemetry Source", "role": "Field Sensors & Well Data", "tech": "HTTP / Webhook"},
@@ -289,7 +290,7 @@ PROJECTS_DATA = [
                 "1. Webhooks ingest sensor feeds into Command Handler",
                 "2. Validates payloads and emits domain events",
                 "3. Query handlers asynchronously update operational read models",
-                "4. Deployed with Argo CD and monitored via OpenTelemetry"
+                "4. Monitored via centralized logging and monitoring, deployed with Argo CD"
             ]
         },
         "whyQuestions": [
@@ -358,7 +359,7 @@ SKILLS_DATA = [
     {
         "category": "Databases & Storage",
         "items": [
-            {"name": "GreptimeDB", "level": "Expert", "icon": "Clock", "years": "1+ yr", "details": "Time-series design, PromQL, gRPC ingestion (~18.5k/s), 30-day TTL lifecycle"},
+            {"name": "GreptimeDB", "level": "Expert", "icon": "Clock", "years": "1+ yr", "details": "Time-series design, PromQL, gRPC ingestion (7K+/min), TTL-based compaction"},
             {"name": "SQL Server", "level": "Advanced", "icon": "Server", "years": "3+ yrs", "details": "Migration, stored procedures, execution plan tuning, dual-write cutovers"},
             {"name": "MongoDB", "level": "Intermediate", "icon": "Boxes", "years": "1+ yr", "details": "Document stores, aggregation pipelines, caching patterns"}
         ]
@@ -376,7 +377,7 @@ SKILLS_DATA = [
         "items": [
             {"name": "Docker & Containers", "level": "Advanced", "icon": "Container", "years": "3+ yrs", "details": "Multi-stage builds, rootless containers, microservice containerization"},
             {"name": "Kubernetes & Argo CD", "level": "Intermediate", "icon": "Cloud", "years": "2+ yrs", "details": "GitOps delivery, ingress routing, multi-pod session affinity runbooks"},
-            {"name": "Azure Functions & Cloud", "level": "Intermediate", "icon": "CloudRain", "years": "2+ yrs", "details": "Serverless functions, Azure AI (AI-900 certified), App Services, KeyVault"}
+            {"name": "Azure Functions & Cloud", "level": "Intermediate", "icon": "CloudRain", "years": "2+ yrs", "details": "Serverless functions, Azure AI (AI 900 certified), App Services, KeyVault"}
         ]
     }
 ]
@@ -385,12 +386,12 @@ WHY_QA_DATA = [
     {
         "question": "Why hire Fakir as a Senior / Staff Backend Engineer?",
         "summary": "Proven track record delivering mission-critical distributed systems, time-series migrations, and real-time AI pipelines in production.",
-        "detailed": "Fakir combines deep academic rigor (IIT Madras M.Tech) with battle-tested production execution at Kongsberg Digital. He has engineered systems handling 10M+ daily events, executed complex storage migrations with zero downtime (saving high infrastructure overhead), and resolved deep distributed systems concurrency bugs across WebSockets, .NET 10, Wolverine, and Orleans."
+        "detailed": "Fakir combines deep academic rigor (IIT Madras M.Tech) with production execution at Falkor. He has engineered systems handling 10M+ daily events, executed complex storage migrations from SQL Server to GreptimeDB (7K+ alert records/min) with sub-second queries, reduced issue diagnosis time by 30% through CQRS modernization, and resolved multi-session concurrency in real-time voice AI pipelines."
     },
     {
         "question": "How do you approach system reliability and zero-downtime migrations?",
         "summary": "Dual-write strategies, backward compatibility, idempotency, and automated health self-healing.",
-        "detailed": "During the SitecomAlert SQL Server to GreptimeDB migration, we implemented a dual-write pattern where telemetry was replicated into both engines while read paths were progressively shifted. Automated 30-day TTL removed fragile external cron jobs. In the voice pipeline, defensive sanitizers (ChatMessageSanitizer) and silence audio streaming eliminated connection drops and 400 bad gateway errors."
+        "detailed": "During the high-volume alert migration from SQL Server to GreptimeDB (7K+ alert records/min), we implemented a dual-write pattern where telemetry was replicated into both engines while read paths were progressively shifted. Automated TTL-based compaction removed fragile external cron jobs and eliminated data bloating. In the voice pipeline, defensive sanitizers (ChatMessageSanitizer) and silence audio streaming eliminated connection drops and 400 bad gateway errors."
     },
     {
         "question": "What is your philosophy on choosing the right message broker (Kafka vs NATS vs Wolverine)?",

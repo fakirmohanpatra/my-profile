@@ -74,13 +74,13 @@ export const Hero: React.FC<HeroProps> = ({ mode, onScrollToProjects, onScrollTo
               {mode === 'recruiter' ? (
                 <div className="p-4 bg-amber-100/60 dark:bg-slate-800/80 border-2 border-black dark:border-white/20 rounded-xl shadow-brutal">
                   <p className="font-semibold text-slate-900 dark:text-white">
-                    🎯 <span className="font-extrabold text-indigo-700 dark:text-indigo-400">Recruiter Elevator Pitch:</span> I specialize in architecting resilient backend data platforms, modernizing enterprise services to .NET 10, and building end-to-end automated AI pipelines. Proven track record at <strong className="font-bold text-black dark:text-white">Kongsberg Digital</strong> delivering ~18.5k rows/sec time-series systems, cutting cloud costs with automated TTL, and resolving complex multi-turn voice AI concurrency in production.
+                    🎯 <span className="font-extrabold text-indigo-700 dark:text-indigo-400">Recruiter Elevator Pitch:</span> I specialize in architecting resilient distributed backend systems, event-driven streaming with Kafka &amp; NATS (10M+ events/day), modernizing services to .NET 10, and building real-time voice AI pipelines. Proven track record at <strong className="font-bold text-black dark:text-white">Falkor</strong> delivering high-volume time-series ingestion (7K+ records/min) with automated TTL compaction, reducing issue diagnosis time by 30%, and resolving multi-session voice concurrency.
                   </p>
                 </div>
               ) : (
                 <div className="p-4 bg-sky-100/60 dark:bg-slate-800/80 border-2 border-black dark:border-white/20 rounded-xl shadow-brutal font-mono text-sm">
                   <p className="text-slate-900 dark:text-white">
-                    🛠️ <span className="font-bold text-cyan-600 dark:text-cyan-400">Architect Deep-Dive:</span> Core strengths in <span className="bg-funky-cyan/40 px-1 border border-black dark:border-white/30 rounded">virtual actors (Orleans)</span>, <span className="bg-funky-lime/40 px-1 border border-black dark:border-white/30 rounded">streaming topologies (Kafka &amp; NATS JetStream)</span>, and <span className="bg-funky-pink/20 px-1 border border-black dark:border-white/30 rounded">time-series migrations (GreptimeDB gRPC)</span>. Hands-on expertise resolving low-level WebSocket race conditions, orphaned tool calls (ChatMessageSanitizer), and zero-hallucination regex-grounded LLM pipelines.
+                    🛠️ <span className="font-bold text-cyan-600 dark:text-cyan-400">Architect Deep-Dive:</span> Core strengths in <span className="bg-funky-cyan/40 px-1 border border-black dark:border-white/30 rounded">virtual actors (Orleans)</span>, <span className="bg-funky-lime/40 px-1 border border-black dark:border-white/30 rounded">streaming topologies (Kafka &amp; NATS JetStream)</span>, and <span className="bg-funky-pink/20 px-1 border border-black dark:border-white/30 rounded">time-series migrations (GreptimeDB gRPC)</span>. Hands-on expertise resolving low-level WebSocket race conditions, orphaned tool calls (ChatMessageSanitizer), and fact-verified regex-grounded LLM pipelines.
                   </p>
                 </div>
               )}
@@ -132,14 +132,14 @@ export const Hero: React.FC<HeroProps> = ({ mode, onScrollToProjects, onScrollTo
 
               <div className="flex items-center space-x-3 mb-4">
                 <div className="w-14 h-14 rounded-xl bg-gradient-to-tr from-funky-pink to-funky-yellow border-2 border-black flex items-center justify-center font-black text-white text-2xl shadow-brutal">
-                  FP
+                  FMP
                 </div>
                 <div>
                   <h3 className="font-black text-lg text-slate-900 dark:text-white">
                     {PROFILE_DATA.name}
                   </h3>
                   <p className="text-xs text-slate-500 dark:text-slate-400 font-mono">
-                    Software Developer @ Kongsberg Digital
+                    Software Developer @ Falkor
                   </p>
                   <p className="text-xs text-slate-500 dark:text-slate-400 flex items-center mt-0.5">
                     <MapPin className="w-3 h-3 mr-1 text-red-500" />
@@ -249,7 +249,7 @@ export const Hero: React.FC<HeroProps> = ({ mode, onScrollToProjects, onScrollTo
       {/* Marquee Ticker */}
       <div className="mt-8 bg-black text-funky-lime border-y-2 border-black py-2 overflow-hidden flex whitespace-nowrap">
         <div className="inline-block animate-marquee font-mono text-xs font-bold tracking-widest uppercase">
-          ⚡ 10M+ DAILY EVENTS • 🚀 ~18,500 ROWS/SEC WRITES • ⏱️ 519MS TIME-SERIES QUERY • 🎙️ &lt;300MS REALTIME VOICE AI • 🎬 5 AUTONOMOUS VIDEOS/DAY • 🏆 2X SPOTLIGHT AWARD @ KONGSBERG DIGITAL • 🎓 IIT MADRAS M.TECH • 🛡️ ZERO-HALLUCINATION FACT CHECKER • ⚡ 10M+ DAILY EVENTS • 🚀 ~18,500 ROWS/SEC WRITES • ⏱️ 519MS TIME-SERIES QUERY • 🎙️ &lt;300MS REALTIME VOICE AI • 🎬 5 AUTONOMOUS VIDEOS/DAY
+          ⚡ 10M+ DAILY EVENTS • 🚀 7K+ ALERTS/MIN INGESTION • ⏱️ SUB-SECOND TIME-SERIES QUERIES • 🎙️ REAL-TIME CONVERSATIONAL VOICE AI • 🎬 5 AUTONOMOUS VIDEOS/DAY • 🏆 2X SPOTLIGHT AWARD @ Falkor • 🎓 IIT MADRAS M.TECH • 🛡️ FACT-VERIFIED MEDIA PIPELINE • ⚡ 10M+ DAILY EVENTS • 🚀 7K+ ALERTS/MIN INGESTION • ⏱️ SUB-SECOND TIME-SERIES QUERIES • 🎙️ REAL-TIME CONVERSATIONAL VOICE AI • 🎬 5 AUTONOMOUS VIDEOS/DAY
         </div>
       </div>
     </section>

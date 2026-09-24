@@ -31,7 +31,7 @@ export const ExperienceTimeline: React.FC = () => {
               </h3>
             </div>
 
-            {/* Kongsberg Digital */}
+            {/* Falkor */}
             <div className="bg-white dark:bg-slate-800 border-3 border-black dark:border-white/20 rounded-2xl p-6 shadow-brutal relative">
               <div className="flex flex-wrap items-center justify-between gap-2 mb-2">
                 <div>
@@ -39,7 +39,7 @@ export const ExperienceTimeline: React.FC = () => {
                     Software Developer
                   </h4>
                   <div className="flex items-center space-x-2 text-sm font-bold text-funky-pink">
-                    <span>Kongsberg Digital</span>
+                    <span>Falkor</span>
                     <span>•</span>
                     <span className="flex items-center text-xs text-slate-500 dark:text-slate-400 font-mono">
                       <MapPin className="w-3 h-3 mr-0.5" /> Bangalore, IN
@@ -55,25 +55,25 @@ export const ExperienceTimeline: React.FC = () => {
                 <li className="flex items-start">
                   <span className="text-funky-lime font-black mr-2 text-base">✦</span>
                   <span>
-                    <strong>Led POC &amp; End-to-End Migration to GreptimeDB:</strong> Architected time-series alert migration at 10M+ scale, hitting <strong>~18,500 rows/sec</strong> via gRPC, <strong>519ms</strong> filtered query latency, and 30-day automated TTL lifecycle.
+                    <strong>POC &amp; End-to-End GreptimeDB Migration:</strong> Led migration from SQL Server to GreptimeDB for high-volume ingestion of <strong>7K+ time-series alert records/min</strong>; designed scalable schema with <strong>TTL-based compaction</strong> to prevent production data bloating, eliminate manual cleanup, and retain historical data intelligently.
                   </span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-funky-cyan font-black mr-2 text-base">✦</span>
                   <span>
-                    <strong>Upgraded Messaging to .NET 10 &amp; Wolverine:</strong> Modernized Kafka, NATS JetStream, and Orleans integrations. Refactored custom JetStream bootstrap into native framework provisioning, eliminating code bloat and startup crash regressions.
+                    <strong>Messaging Platform Upgrade (.NET 10):</strong> Modernized Wolverine, Kafka, and NATS integrations by replacing custom JetStream bootstrap with native <strong>NATS.Net v3 capabilities</strong>; built a plug-and-play messaging abstraction enabling broker switching without application-level changes while improving stream provisioning and startup reliability.
                   </span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-funky-pink font-black mr-2 text-base">✦</span>
                   <span>
-                    <strong>Low-Latency Voice AI Pipeline (KvantumX):</strong> Built authenticated WebSocket byte-pump for GPT-Realtime with private-cloud Whisper/Piper fallback. Solved multi-turn concurrency corruption and auto-healed orphaned tool calls.
+                    <strong>Real-Time Conversational Voice AI Pipeline:</strong> Implemented real-time STT-TTS conversational pipeline for enterprise voice interactions, resolving <strong>concurrency, session management, state isolation, and audio echo issues</strong> to deliver low-latency multi-session experiences that became a valuable sales enablement showcase asset.
                   </span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-funky-yellow font-black mr-2 text-base">✦</span>
                   <span>
-                    <strong>Flask to .NET Core CQRS Migration:</strong> Re-engineered legacy telemetry microservices into high-throughput CQRS pipelines, improving reliability, OpenTelemetry observability, and CI/CD via Argo CD.
+                    <strong>Flask to .NET Core CQRS Migration:</strong> Re-engineered third-party telemetry services into a standardized CQRS ingestion architecture, <strong>reducing issue diagnosis time by 30%</strong> and improving observability through centralized logging and monitoring.
                   </span>
                 </li>
               </ul>
@@ -180,7 +180,7 @@ export const ExperienceTimeline: React.FC = () => {
                     <span className="font-mono text-slate-500 dark:text-slate-400">2023 – 2024</span>
                   </div>
                   <p className="text-slate-600 dark:text-slate-300 mt-0.5">
-                    Kongsberg Digital: Recognized for Python-to-.NET migration &amp; time-series POC leadership.
+                    Falkor: Recognized for Python-to-.NET Core migration and delivering scalable data integration POC.
                   </p>
                 </div>
 
@@ -192,14 +192,14 @@ export const ExperienceTimeline: React.FC = () => {
                     <span className="font-mono text-slate-500 dark:text-slate-400">2024</span>
                   </div>
                   <p className="text-slate-600 dark:text-slate-300 mt-0.5">
-                    Built domain-specific RAG chatbot with deterministic citation grounding.
+                    Built domain-specific RAG chatbot for marketing content generation.
                   </p>
                 </div>
 
                 <div className="p-2.5 bg-white dark:bg-slate-900 rounded-lg border border-black/30 dark:border-white/20">
                   <div className="flex items-center justify-between">
                     <span className="font-extrabold text-slate-900 dark:text-white">
-                      📜 Azure AI Certified (AI-900)
+                      📜 Azure AI Certified (AI 900)
                     </span>
                     <span className="font-mono text-slate-500 dark:text-slate-400">June 2025</span>
                   </div>

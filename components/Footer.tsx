@@ -44,7 +44,7 @@ export const Footer: React.FC = () => {
           <div className="md:col-span-6 space-y-4">
             <div className="flex items-center space-x-3">
               <div className="w-9 h-9 rounded-lg bg-funky-lime border-2 border-black flex items-center justify-center font-black text-black text-lg shadow-brutal">
-                FP
+                FMP
               </div>
               <h3 className="text-xl font-black">{PROFILE_DATA.name}</h3>
             </div>

@@ -132,21 +132,21 @@ Fakir Mohan Patra - Bangalore, IN - fakirmohan@alumni.iitm.ac.in
                   <span className="text-xs font-mono text-slate-600">July 2023 – Present</span>
                 </div>
                 <div className="flex justify-between items-baseline text-xs italic text-slate-600 mb-1.5">
-                  <span>Kongsberg Digital</span>
+                  <span>Falkor</span>
                   <span>Bangalore, IN</span>
                 </div>
                 <ul className="list-disc list-outside pl-4 space-y-1.5 text-xs text-slate-800 leading-normal">
                   <li>
-                    Led a <strong>POC and end-to-end migration</strong> from <strong>SQL Server to GreptimeDB</strong> for high-volume ingestion of <strong>millions of alert records</strong>, designing a time-series schema, and enabling <strong>TTL-based lifecycle management</strong> to eliminate manual cleanup; leveraged <strong>gRPC</strong> for ingestion (~18.5k rows/sec) and the <strong>Postgres protocol</strong> for application queries (519ms latency).
+                    Led a <strong>POC and end-to-end migration</strong> from <strong>SQL Server to GreptimeDB</strong> for high-volume ingestion of <strong>7K+ time-series alert records per minute</strong>; designed a scalable schema with <strong>TTL-based compaction</strong> to prevent production data bloating, eliminate manual cleanup, and retain historical data intelligently for long-term access.
                   </li>
                   <li>
-                    Upgraded the messaging platform from <strong>.NET 8 to .NET 10</strong>, modernizing <strong>Wolverine, Kafka, NATS, and Orleans</strong> integrations by replacing custom NATS JetStream initialization with native framework capabilities, simplifying stream and consumer provisioning, and improving startup reliability.
+                    Upgraded the messaging platform from <strong>.NET 8 to .NET 10</strong>, modernizing <strong>Wolverine, Kafka, NATS integrations</strong> by replacing custom NATS JetStream initialization with native <strong>NATS.Net v3 capabilities</strong>, building a <strong>plug-and-play messaging abstraction</strong> that enabled customers to switch between Kafka and NATS without application-level changes while simplifying stream and consumer provisioning and improving startup reliability.
                   </li>
                   <li>
-                    Designed and implemented a <strong>real-time STT-TTS pipeline</strong> for enterprise voice interactions, enabling low-latency conversational audio experiences while resolving <strong>concurrency, session management, and state-isolation</strong> issues across real-time voice sessions.
+                    Designed and implemented a <strong>real-time STT-TTS conversational pipeline</strong> for enterprise voice interactions, enabling customers to engage through live voice conversations instead of typed queries; resolved <strong>concurrency, session management, state isolation, and audio echo issues</strong> to deliver low-latency multi-session experiences, creating a compelling customer demo that became a valuable sales enablement asset during product showcases.
                   </li>
                   <li>
-                    Migrated third-party data ingestion services from <strong>Flask to .NET Core</strong>, implementing a <strong>CQRS-based ingestion workflow</strong> to separate write operations from downstream processing, standardize data flows within the .NET ecosystem, and improve service reliability and observability.
+                    Migrated third-party data ingestion services from <strong>Flask to .NET Core</strong>, implementing a <strong>CQRS-based ingestion architecture</strong> that standardized data flows within the .NET ecosystem, <strong>reduced production issue diagnosis time by 30%</strong>, and improved observability through centralized logging and monitoring for faster failure debugging.
                   </li>
                 </ul>
               </div>
@@ -196,16 +196,16 @@ Fakir Mohan Patra - Bangalore, IN - fakirmohan@alumni.iitm.ac.in
                 Certifications
               </h2>
               <p className="mt-2 text-xs text-slate-800">
-                Microsoft Certified: Azure AI Fundamentals (AI-900) — June 2025
+                Microsoft Certified: Azure AI Fundamentals (AI 900) — June 2025
               </p>
             </div>
             <div>
               <h2 className="text-sm font-black uppercase tracking-wider text-slate-900 pb-1 border-b-2 border-slate-900">
-                Achievements
+                Achievements (2023 – 2024)
               </h2>
               <ul className="mt-2 list-disc list-outside pl-4 text-xs text-slate-800 space-y-1">
-                <li>(2x) Spotlight Award for Python-to-.NET migration &amp; data integration POC.</li>
-                <li>Top 5 in AI Hackathon for RAG-based domain chatbot.</li>
+                <li><strong>(2x) Spotlight Award</strong> for leading Python-to-.NET Core migration and delivering scalable data integration POC.</li>
+                <li><strong>Top 5 in AI Hackathon</strong> for building a RAG-based chatbot for domain-specific marketing content generation.</li>
               </ul>
             </div>
           </div>
@@ -218,21 +218,21 @@ Fakir Mohan Patra - Bangalore, IN - fakirmohan@alumni.iitm.ac.in
             <div className="mt-2.5">
               <div className="flex justify-between items-baseline text-xs">
                 <span className="font-bold text-slate-900">
-                  The Dugout — Autonomous AI Media Pipeline
+                  The Dugout – Autonomous AI Media Pipeline
                 </span>
                 <span className="font-mono text-slate-500 italic">
-                  Python, Gemini API, FFmpeg, Docker, YouTube &amp; Meta APIs
+                  Python, Gemini API, FFmpeg, Docker, YouTube Data API
                 </span>
               </div>
               <ul className="list-disc list-outside pl-4 space-y-1 text-xs text-slate-800 mt-1">
                 <li>
-                  Built an end-to-end automated sports media pipeline publishing <strong>5 daily short-form videos</strong>, integrating multi-source RSS discovery, virality scoring, and <strong>30-day Jaccard deduplication</strong>.
+                  Built an end-to-end automated sports media pipeline publishing <strong>5 daily short-form videos</strong>, integrating multi-source RSS discovery, virality scoring, and <strong>30-day Jaccard-based deduplication</strong>.
                 </li>
                 <li>
-                  Engineered fact-verified scripts and broadcast-style <strong>1080x1920 video generation</strong> with real photography, FFmpeg/MoviePy motion effects, Gemini/Edge TTS, and Frame 0 custom thumbnail injection.
+                  Engineered fact-verified scripts and broadcast-style <strong>1080x1920 video generation</strong> with real photography, FFmpeg/MoviePy motion effects, Gemini/Edge TTS, subtitles, and automated platform publishing.
                 </li>
                 <li>
-                  Automated <strong>24/7 cloud execution</strong> using Docker and GitHub Actions with scheduled cron execution.
+                  Automated <strong>24/7 cloud execution</strong> using Docker and GitHub Actions with scheduled generation, video processing, thumbnail handling, and multi-platform distribution.
                 </li>
               </ul>
             </div>

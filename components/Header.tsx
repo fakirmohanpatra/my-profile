@@ -40,7 +40,7 @@ export const Header: React.FC<HeaderProps> = ({ mode, setMode, onOpenResume }) =
         {/* Logo & Name */}
         <div className="flex items-center space-x-3">
           <div className="w-10 h-10 rounded-lg bg-funky-lime border-2 border-black flex items-center justify-center font-black text-black text-xl shadow-brutal transform -rotate-3 hover:rotate-0 transition-transform cursor-pointer">
-            FP
+            FMP
           </div>
           <div>
             <div className="flex items-center space-x-2">

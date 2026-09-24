@@ -1,6 +1,6 @@
 # Fakir Mohan Patra — Interactive Engineering Profile
 
-An illustrative, funky, and ultra-interactive profile application engineered for **HR recruiters**, **Engineering Hiring Managers**, and **Staff+ Technical Interviewers**.
+An illustrative, funky, and ultra-interactive profile application engineered for **HR recruiters**, **Engineering Hiring Managers**, and **Technical Interviewers**.
 
 Built with **Next.js 14 (React 18 + Tailwind CSS)** and a **Python FastAPI backend in `.venv`**, ready for zero-config **Vercel deployment**.
 
@@ -9,7 +9,7 @@ Built with **Next.js 14 (React 18 + Tailwind CSS)** and a **Python FastAPI backe
 ## ⚡ Highlights & Key Features
 
 - **Dual-Persona Mode Switcher**:
-  - **⚡ HR Fast-Pass**: 60-second summary, core competencies, awards (2x Spotlight Award at Kongsberg Digital), education (IIT Madras M.Tech), 1-click contact copy with confetti, and printable resume.
+  - **⚡ HR Fast-Pass**: 60-second summary, core competencies, awards (2x Spotlight Award at Falkor), education (IIT Madras M.Tech), 1-click contact copy with confetti, and printable resume.
   - **🛠️ Architect & Tech Lead Mode**: Full system design blueprints, Architectural Decision Records (ADRs), trade-off matrices, benchmark numbers, and production bug post-mortems.
 - **Interactive Visual Architecture Blueprints**:
   - Click on **any component node** in the system diagrams (e.g. *GreptimeDBIngester*, *RealtimeVoiceWebSocketBridge*, *ChatMessageSanitizer*, *DedupGate*, *Frame 0 CTR*) to inspect:
@@ -17,12 +17,12 @@ Built with **Next.js 14 (React 18 + Tailwind CSS)** and a **Python FastAPI backe
     - Documented architectural trade-offs
     - Exact code patterns & implementations
     - Failure modes and resilience strategies (timeouts, orphaned tool-calls, dead-letter queues)
-- **Flagship Production Systems Showcased**:
-  1. **SitecomAlert (SQL Server to GreptimeDB Migration)**: ~18,500 rows/sec gRPC ingestion, 519ms filtered queries at 10M+ records, automated 30-day storage TTL.
-  2. **Enterprise GPT-Realtime Voice AI (KvantumX)**: Low-latency WebSocket byte-pump with zero API key leaks, tool serialization, silence streaming, and private-cloud offline fallback.
-  3. **The Dugout (Autonomous AI Media Pipeline)**: 5 daily videos to YouTube Shorts & Reels, Jaccard 30-day dedup, Frame 0 algorithmic CTR injection, zero-hallucination regex guard.
-  4. **.NET 10 & Wolverine Modernization**: Upgraded from .NET 8, native NATS JetStream stream provisioning, Orleans virtual actors.
-  5. **CQRS Telemetry Modernization**: Flask to .NET Core migration with separated command/query pipelines and Argo CD.
+- **Production Systems Showcased**:
+  1. **Time-Series Alert Ingestion & GreptimeDB Migration**: Ingestion of 7K+ time-series alert records per minute, sub-second query response, and automated TTL-based compaction preventing production data bloating.
+  2. **Enterprise Real-Time Voice AI Conversational Pipeline**: Low-latency multi-session STT-TTS pipeline resolving concurrency, session management, state isolation, and audio echo for enterprise customer interactions.
+  3. **The Dugout (Autonomous AI Media Pipeline)**: 5 daily videos to YouTube Shorts & Reels, multi-source RSS discovery, virality scoring, 30-day Jaccard deduplication, and automated cloud publishing via Docker & GitHub Actions.
+  4. **.NET 10 & Wolverine Messaging Modernization**: Upgraded from .NET 8 to .NET 10 with native NATS.Net v3 capabilities, plug-and-play messaging abstraction between Kafka and NATS, and Orleans virtual actors.
+  5. **CQRS Telemetry Modernization**: Flask to .NET Core migration with separated command/query pipelines, reducing issue diagnosis time by 30% with centralized logging and monitoring.
 - **"Why Questions" & Recruiter Cheat Sheet**:
   - Comprehensive answers to high-stakes interview questions with documented trade-off comparisons.
 - **Interactive Skills Arsenal**:
